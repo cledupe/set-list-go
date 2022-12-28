@@ -1,0 +1,25 @@
+name: SetList Structure
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    strategy:
+      matrix:
+        go-version:[1.18.x, 1.19.x]
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - name: Install go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go-verion }}
+      
+      - uses: actions/checkout@v2
+
+      - name: test
+        run: go test ./...
