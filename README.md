@@ -1,6 +1,5 @@
 # set-list-go
-Collection Struct that contains no duplicate element
-
+It is a generic collection Struct that not allow  duplicate values
 
 ![example branch parameter](https://github.com/cledupe/set-list-go/actions/workflows/test.yml/badge.svg)
 
