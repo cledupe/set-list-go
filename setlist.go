@@ -1,4 +1,4 @@
-package setlist
+package setlistgo
 
 import (
 	"crypto/md5"
