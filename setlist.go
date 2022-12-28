@@ -6,12 +6,12 @@ import (
 )
 
 type SetList[T any] struct {
-	data map[string]T
+	data map[[16]byte]T
 }
 
 func New[T any]() *SetList[T] {
 	return &SetList[T]{
-		data: map[string]T{},
+		data: map[[16]byte]T{},
 	}
 }
 
@@ -35,11 +35,6 @@ func (s SetList[T]) Has(value T) bool {
 	return ok
 }
 
-func (s SetList[T]) generateId(value T) string {
-	sValue := fmt.Sprint(value)
-	return fmt.Sprint(md5.Sum([]byte(sValue)))
-}
-
 func (s SetList[T]) Size() int {
 	return len(s.data)
 }
@@ -58,4 +53,9 @@ func (s SetList[T]) AsSlice() []T {
 		r = append(r, v)
 	}
 	return r
+}
+
+func (s SetList[T]) generateId(value T) [16]byte {
+	sValue := fmt.Sprint(value)
+	return md5.Sum([]byte(sValue))
 }
