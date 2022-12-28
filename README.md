@@ -1,6 +1,10 @@
 # set-list-go
 Collection Struct that contains no duplicate element
 
+
+![example branch parameter](https://github.com/cledupe/set-list-go/actions/workflows/test.yml/badge.svg)
+
+
 ### Install
 ``go get github.com/cledupe/set-list-go``
 
