@@ -1,5 +1,6 @@
-# set-list-go
-It is a generic collection Struct that not allow  duplicate values
+# SeeList
+It is a generic collection Struct that contains no duplicate element
+
 
 ![example branch parameter](https://github.com/cledupe/set-list-go/actions/workflows/test.yml/badge.svg)
 
