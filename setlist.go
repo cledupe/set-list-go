@@ -16,10 +16,10 @@ func New[T any]() *SetList[T] {
 }
 
 func (s *SetList[T]) Insert(value T) {
-	obectIdentifier := s.generateId(value)
-	_, ok := s.data[obectIdentifier]
+	objectId := s.generateId(value)
+	_, ok := s.data[objectId]
 	if !ok {
-		s.data[obectIdentifier] = value
+		s.data[objectId] = value
 	}
 }
 
